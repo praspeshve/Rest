@@ -1,0 +1,17 @@
+package restapiTesting;
+
+import java.util.*;
+
+import org.testng.annotations.Test;
+import org.testng.collections.Maps;
+
+public class Google_Places2 {
+@Test
+public void place2() {
+	String url = "https://maps.googleapis.com";
+	Map<String, String> param = new HashMap<String, String>();
+	
+	
+	}
+
+}

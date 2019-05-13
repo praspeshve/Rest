@@ -1,0 +1,9 @@
+package restAssured;
+
+public class Payload {
+
+	public static String(getBody) {
+		String body = "";
+		return body;
+	}
+}

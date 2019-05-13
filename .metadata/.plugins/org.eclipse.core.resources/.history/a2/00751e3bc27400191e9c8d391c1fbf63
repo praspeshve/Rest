@@ -1,0 +1,12 @@
+package restapiTesting;
+
+import org.testng.annotations.Test;
+
+public class Google_Places1 {
+
+@Test
+public void Place1() {
+	
+}
+
+}

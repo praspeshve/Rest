@@ -1,0 +1,17 @@
+package restapiTesting;
+
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+import io.restassured.response.ValidatableResponse;
+
+public class Google_Places3 {
+@Test
+public void Test3() {
+	RestAssured.baseURI="https://maps.googleapis.com";
+	ValidatableResponse res = RestAssured.given().param("location", "-33.8670522,151.1957362")
+			.param("radius", "1500").param("type","restaurant").param("keyword", "cruise")
+			.param("key", "AIzaSyCKIY3_Vj5_gStMjARlNF_vEuiXd0DBucY").when().get("maps/api/place/nearbysearch/json")
+			.then().assertThat().statusCode(200).header("Server", "scaffolding on HTTPServer2");
+}
+}

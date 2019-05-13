@@ -1,0 +1,23 @@
+package restapiTesting;
+
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
+import io.restassured.response.ValidatableResponse;
+//asserting status code
+public class Google_Places1 {
+
+@Test
+public void Place1() {
+	RestAssured.baseURI="https://maps.googleapis.com";
+	@SuppressWarnings("unused")
+	ValidatableResponse resp = RestAssured.given().param("location", "-33.8670522,151.1957362")
+			.param("radius", "500")
+			.param("key", "AIzaSyCKIY3_Vj5_gStMjARlNF_vEuiXd0DBucY").when().get("maps/api/place/nearbysearch/json")
+			.then().assertThat().statusCode(200).and().contentType(ContentType.JSON);
+	
+	
+}
+
+}
